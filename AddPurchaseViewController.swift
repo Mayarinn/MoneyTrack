@@ -30,6 +30,13 @@ class AddPurchaseViewController: UIViewController {
     func addSubviews() {
         view.addSubview(titleLabel)
     }
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10)
+        ])
+    }
 
 }
 
