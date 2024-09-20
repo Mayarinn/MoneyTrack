@@ -28,6 +28,14 @@ class AddPurchaseViewController: UIViewController {
         return placeLabel
     }()
     
+    var purchaseLabel: UILabel = {
+        let purchaseLabel = UILabel()
+        purchaseLabel.text = "Purchase"
+        purchaseLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return purchaseLabel
+    }()
+    
     var placeTextField: UITextField = {
         let placeTextField = UITextField()
         placeTextField.borderStyle = .roundedRect
@@ -57,6 +65,7 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(placeLabel)
         view.addSubview(placeTextField)
+        view.addSubview(purchaseLabel)
         view.addSubview(purchaseTextField)
     }
     
