@@ -13,7 +13,7 @@ class AddPurchaseViewController: UIViewController {
     
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "Super Title"
+        titleLabel.text = "Add Purchase"
         titleLabel.font = .systemFont(ofSize: 24)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
