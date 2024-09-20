@@ -48,7 +48,8 @@ class AddPurchaseViewController: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             
             placeLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20),
-            placeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40)
+            placeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
+            placeLabel.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
 
