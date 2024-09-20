@@ -25,6 +25,8 @@ class AddPurchaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray2
+        addSubviews()
+        setConstraints()
     }
 
     func addSubviews() {
