@@ -27,6 +27,9 @@ class AddPurchaseViewController: UIViewController {
         view.backgroundColor = .systemGray2
     }
 
+    func addSubviews() {
+        view.addSubview(titleLabel)
+    }
 
 }
 
