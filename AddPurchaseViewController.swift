@@ -36,6 +36,14 @@ class AddPurchaseViewController: UIViewController {
         return placeTextField
     }()
     
+    var purchaseTextField: UITextField = {
+        let purchaseTextField = UITextField()
+        purchaseTextField.borderStyle = .roundedRect
+        purchaseTextField.translatesAutoresizingMaskIntoConstraints = false
+                
+        return purchaseTextField
+    }()
+    
 //MARK: - functions
     
     override func viewDidLoad() {
@@ -49,6 +57,7 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(placeLabel)
         view.addSubview(placeTextField)
+        view.addSubview(purchaseTextField)
     }
     
     func setConstraints() {
