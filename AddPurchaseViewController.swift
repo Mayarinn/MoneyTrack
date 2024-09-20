@@ -20,6 +20,14 @@ class AddPurchaseViewController: UIViewController {
         return titleLabel
     }()
     
+    var placeLabel: UILabel = {
+        let placeLabel = UILabel()
+        placeLabel.text = "Place"
+        placeLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return placeLabel
+    }()
+    
 //MARK: - functions
     
     override func viewDidLoad() {
