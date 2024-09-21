@@ -126,6 +126,8 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(prevMonthTotalLabel)
     }
     
+    //MARK: - Set Constraints
+    
     func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
@@ -175,7 +177,11 @@ class AddPurchaseViewController: UIViewController {
             
             currentMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
             currentMonthTotalLabel.topAnchor.constraint(equalTo: addPurchaseButton.bottomAnchor, constant: 60),
-            currentMonthTotalLabel.heightAnchor.constraint(equalToConstant: 25)
+            currentMonthTotalLabel.heightAnchor.constraint(equalToConstant: 25),
+            
+            prevMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            prevMonthTotalLabel.topAnchor.constraint(equalTo: currentMonthTotalLabel.bottomAnchor, constant: equalSpacer),
+            prevMonthTotalLabel.heightAnchor.constraint(equalTo: currentMonthTotalLabel.heightAnchor)
             
             //History Link
         ])
