@@ -158,9 +158,14 @@ class AddPurchaseViewController: UIViewController {
             addPurchaseButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             addPurchaseButton.topAnchor.constraint(equalTo: priceTextField.bottomAnchor, constant: 25),
             addPurchaseButton.widthAnchor.constraint(equalToConstant: 150),
-            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30)
+            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30),
             
             //Statistics Section
+            
+            currentMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            currentMonthTotalLabel.topAnchor.constraint(equalTo: addPurchaseButton.bottomAnchor, constant: 60),
+            currentMonthTotalLabel.heightAnchor.constraint(equalToConstant: 25)
+            
             //History Link
         ])
     }
