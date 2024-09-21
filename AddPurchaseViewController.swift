@@ -11,6 +11,8 @@ class AddPurchaseViewController: UIViewController {
 
 //MARK: - variables
     
+    let equalSpacer: CGFloat = 15.0 //vertical spacer between UI elements
+    
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Add Purchase"
@@ -138,7 +140,7 @@ class AddPurchaseViewController: UIViewController {
             purchaseLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
             
             purchaseTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
-            purchaseTextField.topAnchor.constraint(equalTo: placeTextField.bottomAnchor, constant: 15),
+            purchaseTextField.topAnchor.constraint(equalTo: placeTextField.bottomAnchor, constant: equalSpacer),
             purchaseTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
             purchaseTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
             
@@ -149,7 +151,7 @@ class AddPurchaseViewController: UIViewController {
             priceLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
             
             priceTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
-            priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: 15),
+            priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: equalSpacer),
             priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
             priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
             
