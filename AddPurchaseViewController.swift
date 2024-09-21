@@ -68,6 +68,18 @@ class AddPurchaseViewController: UIViewController {
         return priceTextField
     }()
     
+    var addPurchaseButton: UIButton = {
+        let addPurchaseButton = UIButton()
+        addPurchaseButton.setTitle("Add Purchase", for: .normal)
+        addPurchaseButton.layer.cornerRadius = 7
+        addPurchaseButton.backgroundColor = .systemIndigo
+        addPurchaseButton.setTitleColor(.systemYellow, for: .highlighted)
+        
+        addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return addPurchaseButton
+    }()
+    
 //MARK: - functions
     
     override func viewDidLoad() {
@@ -85,6 +97,7 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(purchaseTextField)
         view.addSubview(priceLabel)
         view.addSubview(priceTextField)
+        view.addSubview(addPurchaseButton)
     }
     
     func setConstraints() {
