@@ -116,6 +116,10 @@ class AddPurchaseViewController: UIViewController {
             
             //Price Section
             
+            priceLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            priceLabel.centerYAnchor.constraint(equalTo: priceTextField.centerYAnchor),
+            priceLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
+            
             priceTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
             priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: 15),
             priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
