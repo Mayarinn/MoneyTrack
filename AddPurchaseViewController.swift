@@ -102,7 +102,18 @@ class AddPurchaseViewController: UIViewController {
         return prevMonthTotalLabel
     }()
     
-    //MARK - History Link
+    //MARK: - History Link
+    
+    var historyLinkButton: UIButton = {
+        let historyLinkButton = UIButton()
+        historyLinkButton.setTitle("Purchase History >", for: .normal)
+        historyLinkButton.setTitleColor(.blue, for: .normal)
+        historyLinkButton.setTitleColor(.purple, for: .highlighted)
+        
+        historyLinkButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return historyLinkButton
+    }()
     
 //MARK: - functions
     
@@ -124,6 +135,7 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(addPurchaseButton)
         view.addSubview(currentMonthTotalLabel)
         view.addSubview(prevMonthTotalLabel)
+        view.addSubview(historyLinkButton)
     }
     
     //MARK: - Set Constraints
