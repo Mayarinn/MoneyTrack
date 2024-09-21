@@ -77,7 +77,7 @@ class AddPurchaseViewController: UIViewController {
         addPurchaseButton.setTitle("Add Purchase", for: .normal)
         addPurchaseButton.layer.cornerRadius = 7
         addPurchaseButton.backgroundColor = .systemIndigo
-        addPurchaseButton.setTitleColor(.systemYellow, for: .highlighted)
+        addPurchaseButton.setTitleColor(.purple, for: .highlighted)
         
         addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
         
