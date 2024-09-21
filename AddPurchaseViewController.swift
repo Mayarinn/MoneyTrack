@@ -94,6 +94,14 @@ class AddPurchaseViewController: UIViewController {
         return currentMonthTotalLabel
     }()
     
+    var prevMonthTotalLabel: UILabel = {
+        let prevMonthTotalLabel = UILabel()
+        prevMonthTotalLabel.text = "Previous Month Total: $ 200"
+        prevMonthTotalLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return prevMonthTotalLabel
+    }()
+    
     //MARK - History Link
     
 //MARK: - functions
@@ -115,6 +123,7 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(priceTextField)
         view.addSubview(addPurchaseButton)
         view.addSubview(currentMonthTotalLabel)
+        view.addSubview(prevMonthTotalLabel)
     }
     
     func setConstraints() {
