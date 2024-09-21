@@ -136,7 +136,13 @@ class AddPurchaseViewController: UIViewController {
             priceTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
             priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: 15),
             priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
-            priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor)
+            priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
+            
+            
+            addPurchaseButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            addPurchaseButton.topAnchor.constraint(equalTo: priceTextField.bottomAnchor, constant: 25),
+            addPurchaseButton.widthAnchor.constraint(equalToConstant: 150),
+            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
