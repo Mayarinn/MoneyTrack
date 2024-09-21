@@ -36,6 +36,14 @@ class AddPurchaseViewController: UIViewController {
         return purchaseLabel
     }()
     
+    var priceLabel: UILabel = {
+        let priceLabel = UILabel()
+        priceLabel.text = "Price"
+        priceLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return priceLabel
+    }()
+    
     var placeTextField: UITextField = {
         let placeTextField = UITextField()
         placeTextField.borderStyle = .roundedRect
@@ -50,6 +58,26 @@ class AddPurchaseViewController: UIViewController {
         purchaseTextField.translatesAutoresizingMaskIntoConstraints = false
                 
         return purchaseTextField
+    }()
+    
+    var priceTextField: UITextField = {
+        let priceTextField = UITextField()
+        priceTextField.borderStyle = .roundedRect
+        priceTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return priceTextField
+    }()
+    
+    var addPurchaseButton: UIButton = {
+        let addPurchaseButton = UIButton()
+        addPurchaseButton.setTitle("Add Purchase", for: .normal)
+        addPurchaseButton.layer.cornerRadius = 7
+        addPurchaseButton.backgroundColor = .systemIndigo
+        addPurchaseButton.setTitleColor(.systemYellow, for: .highlighted)
+        
+        addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return addPurchaseButton
     }()
     
 //MARK: - functions
@@ -67,6 +95,9 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(placeTextField)
         view.addSubview(purchaseLabel)
         view.addSubview(purchaseTextField)
+        view.addSubview(priceLabel)
+        view.addSubview(priceTextField)
+        view.addSubview(addPurchaseButton)
     }
     
     func setConstraints() {
@@ -80,7 +111,7 @@ class AddPurchaseViewController: UIViewController {
             placeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
             placeLabel.widthAnchor.constraint(equalToConstant: 75),
             
-            placeTextField.leftAnchor.constraint(equalTo: placeLabel.rightAnchor, constant: 30),
+            placeTextField.leftAnchor.constraint(equalTo: addPurchaseButton.leftAnchor),
             placeTextField.centerYAnchor.constraint(equalTo: placeLabel.centerYAnchor),
             placeTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20),
             placeTextField.heightAnchor.constraint(equalToConstant: 25),
@@ -94,7 +125,24 @@ class AddPurchaseViewController: UIViewController {
             purchaseTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
             purchaseTextField.topAnchor.constraint(equalTo: placeTextField.bottomAnchor, constant: 15),
             purchaseTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
-            purchaseTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor)
+            purchaseTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
+            
+            //Price Section
+            
+            priceLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            priceLabel.centerYAnchor.constraint(equalTo: priceTextField.centerYAnchor),
+            priceLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
+            
+            priceTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
+            priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: 15),
+            priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
+            priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
+            
+            
+            addPurchaseButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            addPurchaseButton.topAnchor.constraint(equalTo: priceTextField.bottomAnchor, constant: 25),
+            addPurchaseButton.widthAnchor.constraint(equalToConstant: 150),
+            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
