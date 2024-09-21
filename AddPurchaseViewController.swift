@@ -193,9 +193,12 @@ class AddPurchaseViewController: UIViewController {
             
             prevMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
             prevMonthTotalLabel.topAnchor.constraint(equalTo: currentMonthTotalLabel.bottomAnchor, constant: equalSpacer),
-            prevMonthTotalLabel.heightAnchor.constraint(equalTo: currentMonthTotalLabel.heightAnchor)
+            prevMonthTotalLabel.heightAnchor.constraint(equalTo: currentMonthTotalLabel.heightAnchor),
             
             //History Link
+            
+            historyLinkButton.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            historyLinkButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -equalSpacer)
         ])
     }
 
