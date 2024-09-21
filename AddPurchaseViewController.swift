@@ -11,6 +11,8 @@ class AddPurchaseViewController: UIViewController {
 
 //MARK: - variables
     
+    let equalSpacer: CGFloat = 15.0 //vertical spacer between UI elements
+    
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Add Purchase"
@@ -19,6 +21,8 @@ class AddPurchaseViewController: UIViewController {
         
         return titleLabel
     }()
+    
+    //MARK: - Add Purchase Section
     
     var placeLabel: UILabel = {
         let placeLabel = UILabel()
@@ -73,11 +77,42 @@ class AddPurchaseViewController: UIViewController {
         addPurchaseButton.setTitle("Add Purchase", for: .normal)
         addPurchaseButton.layer.cornerRadius = 7
         addPurchaseButton.backgroundColor = .systemIndigo
-        addPurchaseButton.setTitleColor(.systemYellow, for: .highlighted)
+        addPurchaseButton.setTitleColor(.purple, for: .highlighted)
         
         addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
         
         return addPurchaseButton
+    }()
+    
+    //MARK: - Statistics Section
+    
+    var currentMonthTotalLabel: UILabel = {
+        let currentMonthTotalLabel = UILabel()
+        currentMonthTotalLabel.text = "Current Month Total: $ 100"
+        currentMonthTotalLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return currentMonthTotalLabel
+    }()
+    
+    var prevMonthTotalLabel: UILabel = {
+        let prevMonthTotalLabel = UILabel()
+        prevMonthTotalLabel.text = "Previous Month Total: $ 200"
+        prevMonthTotalLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return prevMonthTotalLabel
+    }()
+    
+    //MARK: - History Link
+    
+    var historyLinkButton: UIButton = {
+        let historyLinkButton = UIButton()
+        historyLinkButton.setTitle("Purchase History >", for: .normal)
+        historyLinkButton.setTitleColor(.blue, for: .normal)
+        historyLinkButton.setTitleColor(.purple, for: .highlighted)
+        
+        historyLinkButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return historyLinkButton
     }()
     
 //MARK: - functions
@@ -98,7 +133,12 @@ class AddPurchaseViewController: UIViewController {
         view.addSubview(priceLabel)
         view.addSubview(priceTextField)
         view.addSubview(addPurchaseButton)
+        view.addSubview(currentMonthTotalLabel)
+        view.addSubview(prevMonthTotalLabel)
+        view.addSubview(historyLinkButton)
     }
+    
+    //MARK: - Set Constraints
     
     func setConstraints() {
         NSLayoutConstraint.activate([
@@ -123,7 +163,7 @@ class AddPurchaseViewController: UIViewController {
             purchaseLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
             
             purchaseTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
-            purchaseTextField.topAnchor.constraint(equalTo: placeTextField.bottomAnchor, constant: 15),
+            purchaseTextField.topAnchor.constraint(equalTo: placeTextField.bottomAnchor, constant: equalSpacer),
             purchaseTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
             purchaseTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
             
@@ -134,15 +174,31 @@ class AddPurchaseViewController: UIViewController {
             priceLabel.widthAnchor.constraint(equalTo: placeLabel.widthAnchor),
             
             priceTextField.leftAnchor.constraint(equalTo: placeTextField.leftAnchor),
-            priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: 15),
+            priceTextField.topAnchor.constraint(equalTo: purchaseTextField.bottomAnchor, constant: equalSpacer),
             priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
             priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
             
+            //Add Purchase Button
             
             addPurchaseButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             addPurchaseButton.topAnchor.constraint(equalTo: priceTextField.bottomAnchor, constant: 25),
             addPurchaseButton.widthAnchor.constraint(equalToConstant: 150),
-            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30)
+            addPurchaseButton.heightAnchor.constraint(equalToConstant: 30),
+            
+            //Statistics Section
+            
+            currentMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            currentMonthTotalLabel.topAnchor.constraint(equalTo: addPurchaseButton.bottomAnchor, constant: 60),
+            currentMonthTotalLabel.heightAnchor.constraint(equalToConstant: 25),
+            
+            prevMonthTotalLabel.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            prevMonthTotalLabel.topAnchor.constraint(equalTo: currentMonthTotalLabel.bottomAnchor, constant: equalSpacer),
+            prevMonthTotalLabel.heightAnchor.constraint(equalTo: currentMonthTotalLabel.heightAnchor),
+            
+            //History Link
+            
+            historyLinkButton.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
+            historyLinkButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -equalSpacer)
         ])
     }
 
