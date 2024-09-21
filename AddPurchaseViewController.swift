@@ -20,6 +20,8 @@ class AddPurchaseViewController: UIViewController {
         return titleLabel
     }()
     
+    //MARK: - Add Purchase Section
+    
     var placeLabel: UILabel = {
         let placeLabel = UILabel()
         placeLabel.text = "Place"
@@ -80,6 +82,9 @@ class AddPurchaseViewController: UIViewController {
         return addPurchaseButton
     }()
     
+    //MARK - Statistics Section
+    //MARK - History Link
+    
 //MARK: - functions
     
     override func viewDidLoad() {
@@ -138,11 +143,15 @@ class AddPurchaseViewController: UIViewController {
             priceTextField.rightAnchor.constraint(equalTo: placeTextField.rightAnchor),
             priceTextField.heightAnchor.constraint(equalTo: placeTextField.heightAnchor),
             
+            //Add Purchase Button
             
             addPurchaseButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             addPurchaseButton.topAnchor.constraint(equalTo: priceTextField.bottomAnchor, constant: 25),
             addPurchaseButton.widthAnchor.constraint(equalToConstant: 150),
             addPurchaseButton.heightAnchor.constraint(equalToConstant: 30)
+            
+            //Statistics Section
+            //History Link
         ])
     }
 
