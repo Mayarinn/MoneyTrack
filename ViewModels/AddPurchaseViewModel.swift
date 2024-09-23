@@ -13,6 +13,10 @@ class AddPurchaseViewModel {
         print(placeTextField.text ?? "")
         print(purchaseTextField.text ?? "")
         print(priceTextField.text ?? "")
+        
+        placeTextField.text = ""
+        purchaseTextField.text = ""
+        priceTextField.text = ""
     }
     
 }
