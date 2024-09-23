@@ -78,6 +78,7 @@ class AddPurchaseViewController: UIViewController {
         addPurchaseButton.layer.cornerRadius = 7
         addPurchaseButton.backgroundColor = .systemIndigo
         addPurchaseButton.setTitleColor(.purple, for: .highlighted)
+        addPurchaseButton.addTarget(self, action: #selector(addPurchaseButtonClicked), for: .touchUpInside)
         
         addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -200,6 +201,12 @@ class AddPurchaseViewController: UIViewController {
             historyLinkButton.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
             historyLinkButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -equalSpacer)
         ])
+    }
+    
+//MARK: - objc functions
+    
+    @objc func addPurchaseButtonClicked(_ sender: UIButton) {
+        print("Hello")
     }
 
 }
