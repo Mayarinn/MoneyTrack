@@ -207,7 +207,7 @@ class AddPurchaseViewController: UIViewController {
 //MARK: - objc functions
     
     @objc func addPurchaseButtonClicked(_ sender: UIButton) {
-        print("Hello")
+        addPurchaseViewModel.printPurchase(placeTextField, purchaseTextField: purchaseTextField, priceTextField: priceTextField)
     }
 
 }
