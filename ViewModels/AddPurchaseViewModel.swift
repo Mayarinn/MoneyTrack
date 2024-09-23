@@ -5,8 +5,14 @@
 //  Created by Karina Osadchaya on 9/23/24.
 //
 
-import Foundation
+import UIKit
 
 class AddPurchaseViewModel {
+    
+    func printPurchase(_ placeTextField: UITextField, purchaseTextField: UITextField, priceTextField: UITextField) {
+        print(placeTextField.text ?? "")
+        print(purchaseTextField.text ?? "")
+        print(priceTextField.text ?? "")
+    }
     
 }
