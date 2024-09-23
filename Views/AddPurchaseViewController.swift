@@ -12,6 +12,7 @@ class AddPurchaseViewController: UIViewController {
 //MARK: - variables
     
     let equalSpacer: CGFloat = 15.0 //vertical spacer between UI elements
+    let addPurchaseViewModel = AddPurchaseViewModel()
     
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
