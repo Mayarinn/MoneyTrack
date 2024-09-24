@@ -12,6 +12,7 @@ class AddPurchaseViewController: UIViewController {
 //MARK: - variables
     
     let equalSpacer: CGFloat = 15.0 //vertical spacer between UI elements
+    let addPurchaseViewModel = AddPurchaseViewModel()
     
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -78,6 +79,7 @@ class AddPurchaseViewController: UIViewController {
         addPurchaseButton.layer.cornerRadius = 7
         addPurchaseButton.backgroundColor = .systemIndigo
         addPurchaseButton.setTitleColor(.purple, for: .highlighted)
+        addPurchaseButton.addTarget(self, action: #selector(addPurchaseButtonClicked), for: .touchUpInside)
         
         addPurchaseButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -200,6 +202,12 @@ class AddPurchaseViewController: UIViewController {
             historyLinkButton.leftAnchor.constraint(equalTo: placeLabel.leftAnchor),
             historyLinkButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -equalSpacer)
         ])
+    }
+    
+//MARK: - objc functions
+    
+    @objc func addPurchaseButtonClicked(_ sender: UIButton) {
+        addPurchaseViewModel.printPurchase(placeTextField, purchaseTextField: purchaseTextField, priceTextField: priceTextField)
     }
 
 }
