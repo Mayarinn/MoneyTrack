@@ -213,6 +213,7 @@ class AddPurchaseViewController: UIViewController {
                                        place: placeTextField.text ?? "Place",
                                        purchase: purchaseTextField.text ?? "Purchase",
                                        price: priceTextField.text ?? "Price")
+        addPurchaseViewModel.saveRecord(purchaseRecord: newRecord)
     }
 
 }
