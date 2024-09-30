@@ -10,14 +10,14 @@ import Foundation
 var purchaseRecords: [PurchaseRecord] = []
 
 struct PurchaseRecord: Codable {
-//    let date: Date
+//    let date: RecordDate
     let time: String
     let place: String
     let purchase: String
     let price: String
 }
 
-struct Date: Codable {
+struct RecordDate: Codable {
     let year: Int
     let month: Int
     let day: Int
