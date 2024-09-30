@@ -207,10 +207,11 @@ class AddPurchaseViewController: UIViewController {
 //MARK: - objc functions
     
     @objc func addPurchaseButtonClicked(_ sender: UIButton) {
-        let newRecord = PurchaseRecord(time: "Time",
+        let newRecord = PurchaseRecord(date: RecordDate(),
                                        place: placeTextField.text ?? "Place",
                                        purchase: purchaseTextField.text ?? "Purchase",
                                        price: priceTextField.text ?? "Price")
+        
         addPurchaseViewModel.saveRecord(purchaseRecord: newRecord)
         addPurchaseViewModel.printRecords()
     }

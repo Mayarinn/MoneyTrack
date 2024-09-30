@@ -19,10 +19,16 @@ class AddPurchaseViewModel {
     
     func printRecords() {
         for i in (0...purchaseRecords.count-1) {
-            print(purchaseRecords[i].place, " ",
+            print(purchaseRecords[i].date.day, " ",
+                  purchaseRecords[i].date.month, " ",
+                  purchaseRecords[i].date.year, " ",
+                  
+                  purchaseRecords[i].date.hour, ":",
+                  purchaseRecords[i].date.minute, " ",
+                  
+                  purchaseRecords[i].place, " ",
                   purchaseRecords[i].purchase, " ",
                   purchaseRecords[i].price)
-            print("\n")
         }
     }
     
