@@ -11,8 +11,6 @@ class AddPurchaseViewModel {
 
 //MARK: - variables
     
-    var purchaseRecords: [PurchaseRecord] = []
-    
 //MARK: functions
     
     func saveRecord(purchaseRecord: PurchaseRecord) {
