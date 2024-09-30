@@ -17,6 +17,8 @@ extension RecordDate {
         self.month = calendar.component(.month, from: currentDate)
         self.day = calendar.component(.day, from: currentDate)
         
+        self.hour = calendar.component(.hour, from: currentDate)
+        self.minute = calendar.component(.minute, from: currentDate)
     }
         
 }
