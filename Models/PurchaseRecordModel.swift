@@ -7,6 +7,8 @@
 
 import Foundation
 
+var purchaseRecords: [PurchaseRecord] = []
+
 struct PurchaseRecord: Codable {
 //    let date: Date
     let time: String
