@@ -8,7 +8,7 @@
 import Foundation
 
 struct PurchaseRecord: Codable {
-    let date: Date
+//    let date: Date
     let time: String
     let place: String
     let purchase: String
