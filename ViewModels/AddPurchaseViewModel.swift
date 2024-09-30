@@ -21,4 +21,8 @@ class AddPurchaseViewModel {
         priceTextField.text = ""
     }
     
+    func saveRecord(purchaseRecord: PurchaseRecord) {
+        purchaseRecords.append(purchaseRecord)
+    }
+    
 }
