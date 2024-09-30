@@ -8,15 +8,12 @@
 import Foundation
 
 extension PurchaseRecord {
+    
     init(purchaseRecord: PurchaseRecord) {
+        self.date = purchaseRecord.date
         self.place = purchaseRecord.place
         self.purchase = purchaseRecord.purchase
         self.price = purchaseRecord.price
-
-//        self.year = purchaseRecord.date.year
-//        self.month = purchaseRecord.date.month
-//        self.day = purchaseRecord.date.day
-
-        self.time = purchaseRecord.time
     }
+    
 }
