@@ -29,4 +29,13 @@ class AddPurchaseViewModel {
         purchaseRecords.append(purchaseRecord)
     }
     
+    func printRecords() {
+        for i in (0...purchaseRecords.count-1) {
+            print(purchaseRecords[i].place, " ",
+                  purchaseRecords[i].purchase, " ",
+                  purchaseRecords[i].price)
+            print("\n")
+        }
+    }
+    
 }
