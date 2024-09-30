@@ -9,6 +9,8 @@ import UIKit
 
 class AddPurchaseViewModel {
     
+    var purchaseRecords: [PurchaseRecord] = []
+    
     func printPurchase(_ placeTextField: UITextField, purchaseTextField: UITextField, priceTextField: UITextField) {
         print(placeTextField.text ?? "")
         print(purchaseTextField.text ?? "")
