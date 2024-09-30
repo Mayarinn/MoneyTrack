@@ -208,6 +208,11 @@ class AddPurchaseViewController: UIViewController {
     
     @objc func addPurchaseButtonClicked(_ sender: UIButton) {
         addPurchaseViewModel.printPurchase(placeTextField, purchaseTextField: purchaseTextField, priceTextField: priceTextField)
+        
+        let newRecord = PurchaseRecord(time: "Time",
+                                       place: placeTextField.text ?? "Place",
+                                       purchase: purchaseTextField.text ?? "Purchase",
+                                       price: priceTextField.text ?? "Price")
     }
 
 }
