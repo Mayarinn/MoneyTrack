@@ -15,16 +15,6 @@ class AddPurchaseViewModel {
     
 //MARK: functions
     
-    func printPurchase(_ placeTextField: UITextField, purchaseTextField: UITextField, priceTextField: UITextField) {
-        print(placeTextField.text ?? "")
-        print(purchaseTextField.text ?? "")
-        print(priceTextField.text ?? "")
-        
-        placeTextField.text = ""
-        purchaseTextField.text = ""
-        priceTextField.text = ""
-    }
-    
     func saveRecord(purchaseRecord: PurchaseRecord) {
         purchaseRecords.append(purchaseRecord)
     }
